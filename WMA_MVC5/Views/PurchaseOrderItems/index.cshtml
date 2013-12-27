@@ -1,0 +1,171 @@
+﻿@model IEnumerable<BusinessLayer.Purchase_Order_Item>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Purchase_Order_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock_Code_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ERP_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ERP_Po_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ERP_Po_Item_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dstrct_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Po_Item_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Receipt_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supp_Lead_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preq_Stk_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unit_Of_Purch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Warehouse_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Delivery_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipped_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orig_Qty_I)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curr_Qty_I)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curr_Qty_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Retn_Qty_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Due_Site_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curr_Due_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orig_Due_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supp_Desp_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipped_Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Purchase_Order_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock_Code_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ERP_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ERP_Po_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ERP_Po_Item_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dstrct_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Po_Item_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Receipt_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supp_Lead_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preq_Stk_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit_Of_Purch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Warehouse_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Delivery_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shipped_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orig_Qty_I)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curr_Qty_I)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curr_Qty_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Retn_Qty_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Due_Site_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curr_Due_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orig_Due_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supp_Desp_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shipped_Date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Purchase_Order_Item_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Purchase_Order_Item_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Purchase_Order_Item_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<BusinessLayer.Purchase_Order>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Note_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ERP_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ERP_Po_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Po_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dstrct_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Freight_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deliv_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_Rcpt_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Whouse_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Completed_Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ERP_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ERP_Po_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Po_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dstrct_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Freight_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deliv_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last_Rcpt_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Whouse_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Completed_Date)
+        </td>
+        <td>
+            @Html.ActionLink("See Details", "../PurchaseOrderItems/index", new { id = item.Purchase_Order_ID }) |
+
+        </td>
+    </tr>
+}
+
+</table>
