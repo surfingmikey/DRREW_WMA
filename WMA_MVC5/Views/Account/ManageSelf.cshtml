@@ -1,0 +1,28 @@
+﻿@using AspNetRoleBasedSecurity.Models;
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Manage My Account";
+}
+<h2>@ViewBag.Title.</h2>
+<p class="text-success">@ViewBag.StatusMessage</p>
+
+
+<p>You're logged in as <strong>@User.Identity.GetUserName()</strong>.</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+            <li>
+                @Html.ActionLink("Change Password" , "../Account/Manage")
+            </li>
+            <li>@Html.ActionLink("Change Ellispe Password" , "../Account/ManageElipsePassword")
+            </li>
+        </ul>
+       
+
+
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

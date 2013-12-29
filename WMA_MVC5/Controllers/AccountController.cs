@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using AspNetRoleBasedSecurity.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using WMA_MVC5.Models;
+
 
 namespace AspNetRoleBasedSecurity.Controllers
 {
@@ -59,8 +60,8 @@ namespace AspNetRoleBasedSecurity.Controllers
             return View(model);
         }
 
+          [AllowAnonymous]
 
-        [Authorize(Roles = "Admin")]
         public ActionResult Register()
         {
             return View();
@@ -68,7 +69,7 @@ namespace AspNetRoleBasedSecurity.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
@@ -101,6 +102,17 @@ namespace AspNetRoleBasedSecurity.Controllers
             ViewBag.ReturnUrl = Url.Action("Manage");
             return View();
         }
+
+        public ActionResult ManageSelf()
+        {
+          
+            return View();
+        }
+        
+      
+       
+        
+        //TODO: add ellipse creds checking and processing
 
         public ActionResult ManageElipseDetails(ManageMessageId? message)
         {
