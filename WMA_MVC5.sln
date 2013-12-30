@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMA_MVC5", "WMA_MVC5\WMA_MVC5.csproj", "{46226FD8-B63B-41AA-B979-3B94F8C02D18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMAMVC5", "WMA_MVC5\WMAMVC5.csproj", "{46226FD8-B63B-41AA-B979-3B94F8C02D18}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{5BBD925F-28E3-46FD-9585-EE96D3908829}"
 EndProject

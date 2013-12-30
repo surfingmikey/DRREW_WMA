@@ -11,7 +11,7 @@ namespace WMAStart.Controllers
     public class ManifestController : Controller
     {
         //
-        // GET: /Manifest/
+        // GET: /Manifest/ tes code
 
         public ActionResult Index()
         {
