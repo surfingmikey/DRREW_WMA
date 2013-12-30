@@ -1,68 +1,10 @@
 ﻿@model IEnumerable<BusinessLayer.Manifest>
+test
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Manifest_Number)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Manifest_Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ETA_Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cubic_Meters)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Trailer_Details)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BLAA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Warehouse_ID)
-        </th>
-        <th></th>
-    </tr>
+@{
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Manifest_Number)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Manifest_Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ETA_Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cubic_Meters)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Trailer_Details)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BLAA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Warehouse_ID)
-        </td>
-        <td>
-            @Html.ActionLink("See Purchase orders" , "../PurchaseOrder/index", new { id = item.Manifest_Number }) |
 
-        </td>
-    </tr>
-}
+       WebGrid grid =  new WebGrid(source:Model , rowsPerPage:5);
 
-</table>
+
+          }
